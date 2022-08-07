@@ -47,6 +47,7 @@ a {
 
 .header_nav-links {
   display: flex;
+  z-index: 2;
 }
 
 .header_nav-links a {
@@ -83,9 +84,9 @@ a {
 
 .header_img {
   position: absolute;
-  width: 800px;
-  right: -80px;
-  top: 0;
+  width: 1000px;
+  right: -120px;
+  top: -120px;
   animation-name: sneaker-fly;
   animation-iteration-count: infinite;
   animation-duration: 3s;
@@ -111,6 +112,8 @@ a {
   transform: translateY(-5px);
 }
 
+/* Animation Sneaker Nike Air Maxx 95 */
+
 @keyframes sneaker-fly {
   0% {
     transform: translateY(0px);
@@ -118,5 +121,37 @@ a {
 
   50% {
     transform: translateY(15px);
+  }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+  .header_img {
+    width: 600px;
+    right: 0;
+    top: 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header_img {
+    right: -70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header_title {
+    font-size: 40px;
+  }
+
+  .header_desc {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .header_img {
+    width: 300px;
   }
 }
